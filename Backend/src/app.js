@@ -8,7 +8,7 @@ const bookingRoutes=require('./routes/booking.js')
 
 app.use(express.json())
 app.use(cors());
-
+app.get('/api/health', (req, res) => res.send('OK'));
 //routes
 app.use('/api/auth',authRoutes)
 app.use('/api/events',eventRoutes)
